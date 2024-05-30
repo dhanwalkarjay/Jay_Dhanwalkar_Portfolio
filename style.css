@@ -284,10 +284,58 @@ section {
 }
   
 .about-containers {
+    overflow-x: auto;
     gap: 2rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
+    padding: 10px;
 }
+
+/* scrollbar - about-containers */
+
+.about-containers::-webkit-scrollbar {
+    width: 12px; /* Width of the entire scrollbar */
+    height: 12px;
+}
+
+.about-containers::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+    border-radius: 10px;
+}
+
+.about-containers::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners */
+    border: 2px solid #f1f1f1;
+}
+
+.about-containers::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* scrollbar - about-containers */
+
+
+/* Scroll bar css - start */
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+/* Scroll bar css - end */
   
 .about-details-container {
     justify-content: center;
