@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+    .nav-links ul {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: flex-start; /* Align items to the start */
+        padding-left: 20px; /* Padding to indent the items */
+    }
+    .nav-links li {
+        margin: 10px 0; /* Space between each navigation item vertically */
+    }
+}
