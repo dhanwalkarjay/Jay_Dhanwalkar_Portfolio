@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jay Dhanwalkar</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/mediaQueries.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -16,9 +17,12 @@
 
 <body>
     <div class="main-container">
+        <div class="toggle-button">
+            <img src="assets/logo.png" alt="profile_image" class="logo" />
+        </div>
         <div class="side-bar">
             <div class="hero-title">
-                <img src="assets/logo.png" alt="profile_image" />
+                <img src="assets/logo.png" alt="profile_image" class="logo" />
                 <h1>Jay Dhanwalkar</h1>
             </div>
             <div class="nav-links">
@@ -50,7 +54,7 @@
                 <div class="hero-main">
                     <div class="hero-info">
                         <h4>Hello, I'm</h4>
-                        <h1 style="font-size: 50px;">Jay Dhanwalkar</h1> <br>
+                        <h1>Jay Dhanwalkar</h1> <br>
                         <h1 id="title"> </h1> <br>
                         <a href="assets/Jay_Dhanwalkar.pdf" download="Jay_Dhanwalkar.pdf">
                             <button>Resume</button>
@@ -561,7 +565,7 @@
                 </div>
             </section>
             <section id="contact" class="section">
-                <div style="margin-top: 20px;" class="project-header">
+                <div style="margin-top: 10px; margin-bottom: 30px;" class="project-header">
                     <h6 style="color: #b0b0b0; letter-spacing: 10px; padding-bottom: 10px;">If You Want</h6>
                     <h1 style="letter-spacing: 5px; font-size: 40px;">Contact Me</h1>
                 </div>
@@ -598,6 +602,13 @@
                     </div>
                 </div>
             </section>
+        </div>
+        <div class="toggle-menu">
+            <a href="#" class="nav-link" data-target="home">Home</a>
+            <a href="#" class="nav-link" data-target="about">About</a>
+            <a href="#" class="nav-link" data-target="projects">Projects</a>
+            <a href="#" class="nav-link" data-target="experience">Experience</a>
+            <a href="#" class="nav-link" data-target="contact">Contact</a>
         </div>
     </div>
     <script src="js/script.js"></script>
@@ -674,6 +685,16 @@
                     }
                 });
             });
+        });
+    </script>
+    <script>
+        document.querySelector('.toggle-button').addEventListener('click', function() {
+            var toggleMenu = document.querySelector('.toggle-menu');
+            if (toggleMenu.style.display === 'grid') {
+                toggleMenu.style.display = 'none';
+            } else {
+                toggleMenu.style.display = 'grid';
+            }
         });
     </script>
 </body>
