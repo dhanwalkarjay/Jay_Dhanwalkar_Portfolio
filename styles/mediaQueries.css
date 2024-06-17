@@ -1,10 +1,93 @@
+
+
 @media (max-width: 768px) {
-    .nav-links ul {
-        flex-direction: column; /* Stack items vertically on small screens */
-        align-items: flex-start; /* Align items to the start */
-        padding-left: 20px; /* Padding to indent the items */
+    .main-container {
+        flex-direction: column;
     }
-    .nav-links li {
-        margin: 10px 0; /* Space between each navigation item vertically */
+
+    .side-bar {
+        display: none;
+    }
+
+    .main-screen {
+        width: 100%;
+    }
+
+    .logo {
+        width: 50px;
+        height: auto;
+        display: block;
+        margin: 0px;
+        cursor: pointer;
+    }
+
+    .toggle-menu {
+        display: none;
+        flex-direction: column;
+        background-color: transparent;
+        list-style: none;
+        position: absolute;
+        top: 100px;
+        left: 20px;
+        width: 40%;
+        animation: gradient 5s ease infinite;
+        background: linear-gradient(#212121, #212121) padding-box,
+            linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
+        border: 2px solid transparent;
+        border-radius: 10px;
+    }
+
+    .toggle-menu a {
+        text-decoration: none;
+        padding: 10px;
+    }
+
+    .toggle-menu a:hover {
+        background: linear-gradient(43deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 46%, rgb(255, 204, 112) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .toggle-button {
+        display: block;
+        position: absolute;
+        top: 30px;
+        left: 20px;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+    
+    .toggle-button img{
+        height: 50px;
+        width: 50px;
+    }
+
+    #home {
+        display: grid;
+    }
+
+    .hero-main {
+        text-align: center;
+        margin-left: -100px;
+        padding: 0px;
+        flex-direction: column;
+    }
+
+    .hero-main .hero-info{
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero-info h4{
+        margin-top: 1rem;
+    }
+
+    .hero-info h1{
+        size: 10px;
     }
 }
