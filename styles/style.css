@@ -15,20 +15,22 @@
     width: 100%;
     align-items: center;
     padding: 1rem;
+
+    flex-direction: row;
 }
 
 /* Whole Screen - end */
 
 /* sidebar - start */
 .side-bar {
-    width: 20rem;
-    /* Fixed width for sidebar */
+    width: 20%;
+    padding: 20px;
+    /* width: 20rem; */
+    /* padding: 1.5rem; */
     height: calc(100% - 2rem);
-    /* Full height of the container minus margin */
     margin: 1rem;
     background-color: #333333;
     text-align: center;
-    padding: 1.5rem;
     display: grid;
     align-content: space-evenly;
     justify-content: space-evenly;
@@ -42,11 +44,15 @@
 
 .side-bar .hero-title {
     grid-row: inherit;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .side-bar .hero-title img {
-    width: 9rem;
-    height: 9rem;
+    width: 8rem;
+    height: 8rem;
     padding: 0.5rem;
     -webkit-animation: gradient 5s ease infinite;
     animation: gradient 5s ease infinite;
@@ -57,6 +63,31 @@
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.toggle-button {
+    display: none;
+    text-align: center;
+}
+
+.toggle-button img {
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+    animation: gradient 5s ease infinite;
+    background: linear-gradient(#212121, #212121) padding-box,
+        linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
+    border: 2px solid transparent;
+    padding: 0.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.toggle-button img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-menu {
+    display: none;
+}
 
 .side-bar .hero-title img:hover {
     transform: scale(1.1);
@@ -140,11 +171,13 @@
 
 /* mian screen -start */
 .main-screen {
+    width: 80%;
+    padding: 20px;
+    /* padding: 1rem; */
     flex-grow: 1;
     padding: 20px;
     overflow-y: auto;
     height: calc(100% - 1.4rem);
-    padding: 1rem;
     border-radius: 10px;
     margin: 0.7rem;
     background-color: grey;
@@ -174,9 +207,8 @@
 
 .hero-main .hero-info {
     flex: auto;
-    max-width: 40%;
+    max-width: 55%;
     color: #ffffff;
-    /* White Text */
     align-items: center;
     text-align: center;
     font-weight: 100;
@@ -184,8 +216,8 @@
 
 .hero-main .hero-info h1 {
     padding-top: 0.1rem;
-    font-size: 36px;
-    font-weight: 700;
+    font-size: 50px;
+    font-weight: 600;
     color: #ffffff;
     margin-bottom: 1rem;
     display: inline-flex;
@@ -204,6 +236,9 @@
 #title::after {
     content: "|";
     animation: blink 0.7s infinite;
+    background: linear-gradient(43deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 46%, rgb(255, 204, 112) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 @keyframes blink {
@@ -221,7 +256,7 @@
 }
 
 .hero-main .hero-info h4 {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
     color: #b0b0b0;
     /* Light Grey Text */
@@ -233,7 +268,7 @@
     /* Light Grey Text */
     padding-top: 1rem;
     padding-bottom: 1rem;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 1.6;
 }
 
@@ -249,8 +284,8 @@
         linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
     border: 2px solid transparent;
     border-radius: 16px;
-    width: 300px;
-    height: 380px;
+    width: 250px;
+    height: 290px;
     border-radius: 10px;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
@@ -266,7 +301,7 @@
     color: #ffffff;
     /* White Button Text */
     border: none;
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.3rem;
     border-radius: 15px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
@@ -321,7 +356,7 @@ ul {
 .example-2 .icon-content .tooltip {
     position: absolute;
     text-align: center;
-    width: 105px;
+    width: 100px;
     top: -30px;
     left: 50%;
     transform: translateX(-50%);
@@ -422,8 +457,8 @@ ul {
 }
 
 .card1 {
-    width: 300px;
-    height: 384px;
+    width: 265px;
+    height: 300px;
     transition: all 0.2s;
     position: relative;
     cursor: pointer;
@@ -491,14 +526,14 @@ ul {
 }
 
 .about1 .about-info p {
-    padding: .25rem !important;
+    padding: .20rem !important;
 }
 
 .about1 .about-info h2 {
-    width: 40rem;
+    width: 30rem;
     text-align: center;
-    font-weight: 500;
-    margin-top: 6rem;
+    font-weight: 400;
+    margin-top: 2.1rem;
     font-size: 2.4rem;
     line-height: 3.1rem;
 }
@@ -563,12 +598,16 @@ ul {
     margin-left: 10rem;
     margin-right: 10rem;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+}
+
+.skill-cards::-webkit-scrollbar {
+    display: none;
 }
 
 .cardBox {
-    width: 470px;
-    height: 500px;
+    width: 450px;
+    height: 450px;
     position: relative;
     display: grid;
     place-items: center;
@@ -674,7 +713,7 @@ span {
 
 /* ---------------------- */
 
-.about-me,
+/* .about-me, */
 .skills,
 .contact {
     margin: 20px 0;
@@ -1313,7 +1352,7 @@ main.row {
 .contact-form h2 {
     margin-bottom: 50px;
     color: #fff;
-    width: 50rem;
+    width: 40rem;
     letter-spacing: 10px;
 }
 
