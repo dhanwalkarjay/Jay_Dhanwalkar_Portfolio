@@ -23,36 +23,38 @@
 
 /* sidebar - start */
 .side-bar {
+    display: flex;
     width: 20%;
     padding: 20px;
-    /* width: 20rem; */
-    /* padding: 1.5rem; */
     height: calc(100% - 2rem);
     margin: 1rem;
     background-color: #333333;
     text-align: center;
-    display: grid;
-    align-content: space-evenly;
-    justify-content: space-evenly;
-    align-items: stretch;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
     justify-items: stretch;
     border-radius: 10px;
-    row-gap: 3rem;
+    row-gap: 1rem;
     box-sizing: border-box;
     flex-shrink: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .side-bar .hero-title {
-    grid-row: inherit;
-
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .side-bar .hero-title img {
-    width: 8rem;
-    height: 8rem;
+    width: 6rem;
+    height: 6rem;
     padding: 0.5rem;
     -webkit-animation: gradient 5s ease infinite;
     animation: gradient 5s ease infinite;
@@ -63,7 +65,12 @@
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.side-bar .hero-title h1{
+    font-size: 1rem;
+}
+
 .toggle-button {
+    position: relative;
     display: none;
     text-align: center;
 }
@@ -77,6 +84,7 @@
         linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
     border: 2px solid transparent;
     padding: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -113,7 +121,7 @@
 .side-bar .nav-links a {
     text-decoration: none;
     color: white;
-    font-weight: 100;
+    font-size: 11px;
     padding: 10px 15px;
     transition: background-color 0.3s, color 0.3s;
 }
@@ -139,11 +147,8 @@
 
 .side-bar .nav-icon a {
     color: white;
-    /* Change icon color to white */
-    font-size: 24px;
-    /* Adjust the icon size */
+    font-size: 15px;
     margin: 10px;
-    /* Space between icons */
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -216,7 +221,7 @@
 
 .hero-main .hero-info h1 {
     padding-top: 0.1rem;
-    font-size: 50px;
+    font-size: 28px;
     font-weight: 600;
     color: #ffffff;
     margin-bottom: 1rem;
@@ -226,8 +231,8 @@
 #title {
     display: inline-flex;
     overflow: hidden;
-
     font-weight: bold;
+    font-size: 20px;
     background: linear-gradient(43deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 46%, rgb(255, 204, 112) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -256,7 +261,7 @@
 }
 
 .hero-main .hero-info h4 {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 400;
     color: #b0b0b0;
     /* Light Grey Text */
@@ -284,8 +289,8 @@
         linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
     border: 2px solid transparent;
     border-radius: 16px;
-    width: 250px;
-    height: 290px;
+    width: 200px;
+    height: 240px;
     border-radius: 10px;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
@@ -301,7 +306,7 @@
     color: #ffffff;
     /* White Button Text */
     border: none;
-    padding: 1rem 1.3rem;
+    padding: 0.5rem 0.8rem;
     border-radius: 15px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
@@ -341,7 +346,7 @@ ul {
 }
 
 .example-2 .icon-content {
-    margin: 0 10px;
+    margin: 0 9px;
     position: relative;
 
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
@@ -365,7 +370,7 @@ ul {
     border-radius: 15px;
     opacity: 0;
     visibility: hidden;
-    font-size: 14px;
+    font-size: 10px;
     transition: all 0.3s ease;
 }
 
@@ -388,8 +393,8 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 20%;
     color: #4d4d4d;
     background-color: #ffff;
@@ -448,6 +453,13 @@ ul {
 
 
 /* ---------------------- */
+#about .project-header h6{
+    font-size: 1rem;
+}
+
+#about .project-header h1{
+    font-size: 3rem;
+}
 
 .about1 {
     display: flex;
@@ -457,8 +469,8 @@ ul {
 }
 
 .card1 {
-    width: 265px;
-    height: 300px;
+    width: 205px;
+    height: 230px;
     transition: all 0.2s;
     position: relative;
     cursor: pointer;
@@ -530,11 +542,11 @@ ul {
 }
 
 .about1 .about-info h2 {
-    width: 30rem;
+    width: 20rem;
     text-align: center;
     font-weight: 400;
-    margin-top: 2.1rem;
-    font-size: 2.4rem;
+    margin-top: 1.3rem;
+    font-size: 1.4rem;
     line-height: 3.1rem;
 }
 
@@ -606,14 +618,19 @@ ul {
 }
 
 .cardBox {
-    width: 450px;
-    height: 450px;
+    width: 300px;
+    height: 350px;
     position: relative;
-    display: grid;
+    display: flex;
     place-items: center;
     overflow: hidden;
     border-radius: 20px;
     box-shadow: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center
 }
 
 .card {
@@ -640,7 +657,7 @@ span {
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 800;
     pointer-events: none;
     opacity: 0.1;
@@ -655,18 +672,18 @@ span {
     flex-wrap: wrap;
     justify-content: space-between;
     text-align: center;
-    gap: 4rem;
+    gap: 1rem;
     margin-left: 10px;
     margin-right: 10px;
 }
 
 .card .content h3 {
-    font-size: 3rem;
+    font-size: 1rem;
     padding-bottom: 10px;
 }
 
 .card .content p {
-    font-size: 1.6rem;
+    font-size: 1rem;
     line-height: 25px;
 
     font-weight: bold;
@@ -778,17 +795,23 @@ span {
     margin-bottom: 1rem;
 }
 
+.project-header h1{
+    letter-spacing: 5px; 
+    font-size: 3rem;
+}
+
 .projects {
+    margin-top: 6rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
+    gap: 7rem;
 }
 
 .container {
     position: relative;
-    width: 450px;
-    height: 350px;
+    width: 350px;
+    height: 250px;
     transition: 200ms;
 }
 
@@ -1210,12 +1233,29 @@ span {
 
 /* Experience section */
 
+#experience .project-header {
+    margin-top: 20px;
+}
+
+#experience .project-header h6{
+    color: #b0b0b0; 
+    letter-spacing: 10px; 
+    padding-bottom: 10px;
+    font-size: 1rem;
+}
+
+#experience .project-header h1{
+    letter-spacing: 5px; 
+    font-size: 2rem;
+}
+
 .container-ex {
     width: 100%;
     padding: 35px 10%;
 }
 
 .container-ex {
+    margin-top: 3rem;
     padding-right: calc(10% - 30px);
 }
 
@@ -1226,7 +1266,7 @@ main.row {
 }
 
 .col header.title1 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     background: #b0b0b0;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1295,7 +1335,7 @@ main.row {
 }
 
 .box h3 {
-    font-size: 19px;
+    font-size: 16px;
     padding: 10px 0px 6px;
     font-family: helvetica;
     color: #ffffff;
@@ -1304,7 +1344,7 @@ main.row {
 .box p {
     line-height: 1.2;
     color: #666;
-    font-size: 17px;
+    font-size: 11px;
     word-spacing: 3px;
 }
 
@@ -1325,10 +1365,11 @@ main.row {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh;
-    margin: 0;
+    margin-top: 4rem;
     font-family: Arial, sans-serif;
-
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
 }
 
 .contact-form {
@@ -1352,8 +1393,14 @@ main.row {
 .contact-form h2 {
     margin-bottom: 50px;
     color: #fff;
-    width: 40rem;
+    width: 28rem;
+    font-size: 1rem;
     letter-spacing: 10px;
+}
+
+.two-input {
+    display: flex; 
+    gap: 10px;
 }
 
 .input-group {
@@ -1364,9 +1411,9 @@ main.row {
 
 .input-group input,
 .input-group textarea {
-    width: 100%;
+    width: 90%;
     height: 100%;
-    padding: 10px;
+    padding: 3px;
     border: none;
     border-radius: 20px;
     background-color: grey;
@@ -1397,7 +1444,7 @@ main.row {
 
 .input-group textarea {
     resize: none;
-    height: 15rem;
+    height: 10rem;
     /* Adjust the height as needed */
 }
 
@@ -1407,7 +1454,7 @@ main.row {
     color: #ffffff;
     /* White Button Text */
     border: none;
-    padding: 1rem 1.5rem;
+    padding: 0.6rem 1rem;
     border-radius: 15px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
@@ -1423,6 +1470,14 @@ main.row {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     background-color: #fffefe;
     color: white;
+}
+
+.sidebar-icon-links {
+    display: none;
+}
+
+.or-section {
+    display: none;
 }
 
 .modal {
