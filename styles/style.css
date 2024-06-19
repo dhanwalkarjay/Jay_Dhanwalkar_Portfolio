@@ -806,7 +806,7 @@ span {
     flex-wrap: wrap;
     justify-content: center;
     gap: 7rem;
-    padding-bottom: 2rem;
+/*     padding-bottom: 2rem; */
 }
 
 .container {
