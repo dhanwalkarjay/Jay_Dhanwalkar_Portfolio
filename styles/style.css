@@ -806,6 +806,7 @@ span {
     flex-wrap: wrap;
     justify-content: center;
     gap: 7rem;
+    padding-bottom: 2rem;
 }
 
 .container {
@@ -883,7 +884,7 @@ span {
     bottom: -40px;
     left: 12px;
     /* z-index: 20; */
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     transition: 300ms ease-in-out-out;
     max-width: 100%;
